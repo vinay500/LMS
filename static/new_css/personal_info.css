@@ -1,0 +1,30 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	 
+}
+header{
+	font-size: 23px;
+	padding: 10px;
+}
+.info_div{
+	border:2px;
+	border-radius: 2px;
+	/*box-shadow: 2px black;*/
+}
+label{
+	/*float:left;*/
+	display: block;
+	padding: 5px;
+}
+.change_btn{
+	padding:5px 10px;
+	background-color: blue;
+	color:white;
+	border-radius: 4px;
+	border:7px;
+}
+.change_btn:hover{
+	opacity: 0.7;
+}

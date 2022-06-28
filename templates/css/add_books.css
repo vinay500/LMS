@@ -1,0 +1,45 @@
+.body{
+    background-color: /*#FEBBC1*/ FEB;
+}
+.head{
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+.head_text{
+font-size:50px;
+padding: 15px 10px 15px 10px;
+}
+.form{
+	background-color: #5DC6C1;
+}
+.label{
+	display:block;
+	padding-left: 15px;
+
+}
+.label_text{
+	font-size: 30px;
+    padding-left: 15px;
+}
+.input{
+	padding-left: 30px;
+}
+.input_inner{
+	padding:5px 20px 5px 15px ;
+	border-right:0px;
+	border-left: 0px;
+	border-top: 0px;
+	border-radius: 5px;
+}
+.submit_div{
+	padding: 10px 10px 10px 60px;
+}
+.submit_btn{
+   padding: 7px;
+   background-color: #5CDB95;
+   border-radius: 5px;
+   transition:padding 1s;
+}
+.submit_btn:hover{
+	padding: 14px;
+}

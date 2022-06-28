@@ -1,0 +1,50 @@
+{% extends 'home.html' %}
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Book</title>
+	<meta name="viewport">
+    <meta content="width:device-width,initial-scale:1.0">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/delete_book.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<p class="txt" style="font-size:40px;
+	padding: 15px 10px 15px 10px;">Delete Book</p>
+	<hr>
+	<div >
+		<form action="" method="post" >
+			<div class="form-element">
+				<label class="form-text">Book ID:</label>
+				<input class="form-input" type="number" name="book_id">
+			</div>
+			<hr>
+			<div class="form-element">
+				<label class="form-text">Book Name:</label>
+				<input class="form-input" type="text" name="book_name">
+			</div>
+			<hr>
+			<div class="form-element">
+				<label class="form-text">Book Author:</label>
+				<input class="form-input" type="text" name="book_author">
+			</div>
+			<hr>
+       </form>
+    </div>
+    <div class="delete">
+    	<input type="submit" name="delete" class="delete_btn" value="delete">
+
+
+    </div>
+
+</body>
+</html>
+ {%  endblock %}

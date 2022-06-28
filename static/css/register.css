@@ -1,0 +1,105 @@
+*{
+	margin: 0;
+	padding:0;
+
+}
+.register_form{
+	width: 380px;
+	/*height: 480px;*/
+	height:600px;
+	background-color:white;
+	/*position: relative;*/
+	padding: 5px 0px 200px 0px;
+	margin:5% auto;
+
+
+}
+.login{
+	position: relative;
+	padding:5px 0px 15px 60px;
+}
+/*.btn-1{
+	position: relative;
+	padding:10px 30px;
+	outline:none;
+	cursor: pointer;
+	border:0;
+	background:transparent;
+}*/
+.input-group{
+	top:180px;
+    padding: 15px;
+    width: 500px;
+    background-color:red;
+   /* position: absolute; */
+}
+#input{
+   margin:10px;
+	background:transparent;
+	width:50%;
+}
+.input{
+	/* width: 100%;*/
+	padding-top: 20px
+	padding-bottom: 20px;
+	padding-left:15px;
+	padding-right:15px;
+	background:transparent;
+	width:50%;
+}
+/*.fname{
+    padding: 20px 5px;
+	outline: none;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 1px solid #999;
+	background:transparent;
+	width:50%;
+}*/
+.check-box{
+	width: 20px;
+	cursor: pointer;
+	margin: 30px 10px 15px 0;
+
+}
+.forget{
+   font-size: 15px;
+   padding:15px 0 15px 0;
+   cursor: pointer;
+   text-decoration: none;
+}
+.forget:hover{
+	text-decoration: underline;
+}
+.btn{
+	position: relative;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 30px;
+	border:none;
+	display: block;
+	background:linear-gradient(to right,#ff105f,#ffad06);
+}
+.register-btn{
+    padding-top:15px;
+}
+.submit-btn:hover{
+    background-color:#00cc66;
+
+}
+.register_text{
+	position: relative;
+	padding:5px 0px 15px 60px;
+}
+.option_group{
+    padding-top:15px;
+
+}
+/*.label_option{
+    padding:15px;
+}*/
+.option_input{
+    padding:15px;
+}

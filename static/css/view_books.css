@@ -1,0 +1,22 @@
+.delete_btn{
+   padding:  5px 10px ;
+    margin:5px 20px 5px 10px;
+    border:1px solid black;
+    border-radius:5px;
+    background-color:#EE4C7C;
+    color:white;
+}
+.delete_btn:hover{
+    opacity:0.7px;
+}
+.edit_btn{
+    padding:  5px 10px ;
+    margin:5px 20px 5px 20px;
+    border-radius:5px;
+    color:white;
+    background-color:#4056A1;
+    border:1px solid black;
+}
+.edit_btn:hover{
+    opacity:0.7px;
+}

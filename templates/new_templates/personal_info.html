@@ -1,0 +1,35 @@
+{% extends'library_homepage.html'%}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- meta data -->
+	<meta  name="viewport" content="width=device-width, intial-scale=1">
+	<meta charset="utf-8">
+	<title>Personal info</title>
+	<!-- css link -->
+	<link rel="stylesheet" type="text/css" href="{% static'new_css/personal_info.css'%}">
+</head>
+<body class="container">
+	<header><b>Basic Info</b></header>
+	<!-- <hr> -->
+	<div class="info_div">
+		<form action="" method="post">
+			<label>Username</label>
+			{{ username }}
+			<hr>
+			<label>Email</label>
+			{{ email }}
+			<hr>
+			<label>password</label>
+			{{ password }}
+			<hr>
+		</form>
+	</div>
+	<a href="personal_info_change"><button class="change_btn">Change</button></a>
+</body>
+</html>
+{% endblock %}

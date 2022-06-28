@@ -1,0 +1,27 @@
+.form{
+
+}
+.txt{
+	font-size:40px;
+	padding: 15px 10px 15px 10px;
+}
+.form-text{
+	display: inline;
+	padding-right: 25px;
+	}
+
+.form-input{
+	padding:
+	border-right:0px;
+	border-left: 0px;
+	border-top: 0px;
+}
+.delete{
+	background-color: #EDF5E1;
+	height: 70px;
+}
+.delete_btn{
+	padding: 8px 14px 8px 10px;
+	margin: 10px;
+	border-radius: 8px;
+}

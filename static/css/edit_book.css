@@ -1,0 +1,40 @@
+
+.form{
+	height: 250px;
+	width: 350px;
+	background-color: violet;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin: 150px 350px;
+}
+.form_inner{
+	padding: 10px;
+}
+.form_element{
+	padding: 10px 20px 10px 20px;
+}
+.label{
+	padding: 10px;
+
+}
+.input{
+	border-radius: 5px;
+	border-top: 0px;
+	border-right:  0px;
+	border-left:  0px;
+}
+.label_id{
+	padding:0px  10px ;
+}
+.edit_btn_div{
+	text-align: center;
+	padding: 10px;
+
+}
+.edit_btn{
+	background-color: #4056A1;
+	color: white;
+	padding: 10px 30px ;
+	border-radius: 15px;
+
+}

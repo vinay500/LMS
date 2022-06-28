@@ -1,0 +1,80 @@
+{% extends 'library_homepage.html'%}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,intial-scale=1" >
+	<title>Personal Info change</title>
+	<!--  css link -->
+	<link rel="stylesheet" type="text/css" href="{% static'new_css/personal_info_change.css'%}">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="container">
+<header>Change Personal Info</header>
+<hr>
+<div class="change_info_div">
+		<form action="" method="post">
+			<div class="row">
+				<div class="form_item col-5">
+					<label>Old Username</label>
+					<input type="text" name="old_username" style="margin-left:15px; ">
+				</div>
+				<div class="form_item col-7">
+					<label>New Username</label>
+					<input type="text" name="new_username" style="margin-left:12px; ">
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="form_item col-5">
+					<label>Old UserId</label>
+					<input type="text" name="old_userid" style="margin-left:45px; ">
+				</div>
+				<div class="form_item col-7">
+					<label>New UserId</label>
+					<input type="text" name="new_userid" style="margin-left: 42px;">
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="form_item col-5">
+					<label>Old Email</label>
+					<input type="text" name="old_email" style="margin-left:59px; ">
+				</div>
+				<div class="form_item col-7">
+					<label>New Email</label>
+					<input type="email" name="new_email" style="margin-left:55px; ">
+				</div>
+			</div>
+
+			<hr>
+			<div class="form_item">
+				<label>Old Password</label>
+				<input type="Password" name="old_password" style="margin-left:38px; ">
+			</div>
+			<div class="row">
+				<div class="form_item col-5">
+					<label>New Password</label>
+					<input type="new_password" name="new_password" style="margin-left:33px;">
+				</div>
+
+				<div class="form_item col-7">
+					<label>Re-enter Password</label>
+					<input type="Password" name="reenter_password" style="margin-left:6px; ">
+				</div>
+			</div>
+
+			<a href="personal_info_change"><button class="change_btn">Change</button></a>
+		</form>
+</div>
+ <!-- Optional JavaScript -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

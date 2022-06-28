@@ -1,0 +1,12 @@
+.form{
+    position: absolute;
+     left: 50%;
+      margin-left: 225px;
+       width: 450px;
+       height: 250px;
+        background: blue;
+         border: 8px solid black;
+}
+.heading{
+    text-align:center;
+}

@@ -1,0 +1,192 @@
+{% extends 'library_homepage.html'%}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <he6ad>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="registration.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- font aewsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+<title>Register</title>
+
+    <!-- <title>Register</title>
+  </head>
+  <body>
+  	<form class="register_flow">
+  		<div class="heading">
+            <span class="form_heading_text" style="text-align: center;"><h3>Register</h3></span>
+        </div>
+  	</form>
+  	<div class="form_group">
+  		
+  	</div> -->
+
+  	<!-- w3 schools register form -->
+</head>
+<body class="container" style="position:relative; display: flex;
+  align-items: center;">
+<header>
+	<style type="text/css">
+	.logo_div{
+		background-color: white;
+}
+.logo{
+	max-width: 100%;
+
+}
+.navigation{
+	width: 100%;
+	/*display: block;*/
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 15px 0px;
+	margin-bottom: 10px;
+}
+.nav-text:hover{
+	border:2px solid #585858;
+	border-radius: 5px;
+	padding: 10px;
+	opacity: 0.5;
+}
+</style>
+     <!--  <div class="logo_div">
+        <img src="JB_logo.jpg" class="logo">
+      </div>
+      <hr> -->
+     <!--  <div class="navigation">
+        <ul class="nav nav-pill"> -->
+          <!-- <li class="nav-item">
+            <a href="" class="nav-link active"> <span class="text-dark nav-text">Home</span></a>
+          </li> -->
+        <!-- <li class="nav-item">
+            <a href="library _homepage.html" class="nav-link"><span class="text-dark nav-text" onclick="login_translate()">Login</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="registerpage.html" class="nav-link"><span class="text-dark nav-text" onclick="register_translate()">Register</span></a>
+          </li>
+        </ul>
+       </div>
+    </header> -->
+<form action="/action_page.php" class="register_form">
+  <div class="form_div">
+      <form action="register" method="post"></form>
+          {% csrf_token%}
+            <style type="text/css">
+                .heading{
+                    text-align: center;
+                }
+              }
+            </style>
+                <h1 class="heading">Register</h1>
+                <hr>
+            <style type="text/css">
+              .form_div{
+                width:325px;
+                height: 410px;
+               /* margin: 0px 350px 0px 380px;*/
+               /*centering DIV using margin*/
+                /*margin: auto;*/
+                border-radius: 20px;
+        <!--        /*border: 1px solid black;*/-->
+                /*center vertically*/
+                /*position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);*/
+                 position: absolute;
+                 /*top: 50%;*/
+                 left: 35%;
+                 right: 40%;
+
+                 /*margin: -25px 0 0 -25px;*/
+              }
+                label{
+                    padding: 5px 2px;
+                }
+                input[type=text],[type=password]{
+                    border-radius: 10px;
+                    width:70%;
+                    display: block;
+                padding: 7px;
+                    margin: 15px;
+                border-top:0px;
+                border-right: 0px;
+                border-bottom:1px solid #999;
+                border-left:0px;
+                }
+            </style>
+                <!-- <label for="username"><b>Username</b></label> -->
+                <input type="text" class="form-control" name="username" placeholder="username" id="username">
+                <!-- <label for="userid"><b>UserId</b></label> -->
+                <input type="text" class="form-control" name="userid" placeholder="userid" id="userid">
+                <!-- <label for="email"><b>Email</b></label> -->
+                <input type="text" class="form-control" placeholder="Enter Email" name="email" id="email" required>
+                <!-- <label for="psw"><b>Password</b></label> -->
+                <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psw" required>
+                <!-- <label for="psw-repeat"><b>Repeat Password</b></label> -->
+                <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <div class="container signin">
+                    <p>Already have an account? <a href="library homepage.html">Sign in</a></p>
+                </div>
+             <style type="text/css">
+                .registerbtn{
+                    padding:7px 45px;
+                    border-radius: 10px;
+                    margin-left: 10%;
+                    border:none;
+                    outline: none;
+                    width: 85%;
+                    background-color: white;
+                    color: green;
+                border: 1.5px solid green;
+                }
+                .registerbtn:hover{
+                    background-color: green;
+                color: white;
+                }
+            </style>
+
+            <button type="submit" class="registerbtn">Register</button>
+    </form>
+  </div>
+    <!--passwords matching validation-->
+			<script>
+				function password_matching(){
+				var x=document.getElementById("psw").value;
+				var y=document.getElementById("psw-repeat").value;
+				if(x==y){
+					return true;
+				}
+				else{
+					alert("passwords not matched");
+					return false;
+				}
+				}
+			</script>
+</form>
+
+</body>
+</html>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+{% endblock %}
+  </body>
+</html>

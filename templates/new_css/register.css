@@ -1,0 +1,55 @@
+/*css for  header*/
+.heading{
+    text-align: center;
+}
+/* css for form_div */
+.form_div{
+     width:325px;
+     height: 410px;
+     /* margin: 0px 350px 0px 380px;*/
+     /*centering DIV using margin*/
+     /*margin: auto;*/
+     border-radius: 20px;
+     /*border: 1px solid black;*/
+     /*center vertically*/
+     /*position: absolute;
+     top: 50%;
+     transform: translate(0, -50%);*/
+     /*position: absolute;
+     top: 50%;*/
+     left: 35%;
+     right: 40%;
+      /*margin: -25px 0 0 -25px;*/
+}
+.label{
+     padding: 5px 2px;
+}
+.input[type=text],[type=password]{
+      border-radius: 10px;
+      width:50%;
+      display: block;
+      padding: 7px;
+      margin: 15px;
+      border-top:0px;
+      border-right: 0px;
+      border-bottom:1px solid #999;
+      border-left:0px;
+}
+/* css for register button */
+.registerbtn{
+     padding:7px 45px;
+     border-radius: 10px;
+     margin-left: 10%;
+     border:none;
+     outline: none;
+     width: 85%;
+     background-color: white;
+     color: green;
+border: 1.5px solid green;
+}
+.registerbtn:hover{
+    background-color:green;
+    color: white;
+}
+
+

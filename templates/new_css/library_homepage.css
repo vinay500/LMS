@@ -1,0 +1,110 @@
+*{
+	box-sizing: border-box;
+}
+
+
+
+body{
+	/*background-image: url('library_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;*/
+ background-color: #F0FFFF;
+}
+.logo_div{
+	background-color: white;
+}
+.logo{
+	max-width: 100%;
+
+}
+.navigation{
+	width: 100%;
+	/*display: block;*/
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 15px 0px;
+	margin-bottom: 10px;
+}
+.nav-text:hover{
+	border:2px solid #585858;
+	border-radius: 5px;
+	padding: 10px;
+	opacity: 0.5;
+}
+.body_div{
+	 /*background-color: #F0FFFF;*/
+}
+
+/*.form_div{
+	width: 45%;
+	height:52% ;
+	background-color: white;
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px grey;
+	position: absolute;
+	left:25%;
+	/*margin: auto;
+	/*border:1px solid black;*/
+	/*display: grid;
+	grid-template-columns:1fr;*/ 
+	/*overflow: hidden;
+}*/
+.form_div{
+	margin: auto;
+}
+.heading{
+	padding: 25px;
+	display: block;
+}
+.input_field{
+	border-radius: 50px;
+}
+.login_from{
+	/*position: absolute;*/
+	width: 45%;
+	margin-top: 20px;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px grey;
+
+}
+#register_form{
+	position: absolute;
+	top:0;
+	left:0;
+}
+.select_div{
+	padding: 5px;
+	border-radius: 10px;
+}
+.select_div:focus{
+	outline: none;
+	border:1.5px solid black;
+}
+select{
+	
+}
+
+.submit_btn{
+	padding:4px 45px;
+	border-radius: 0px;
+	margin-left: 10%;
+	border:1.5px solid blue;
+	outline: none;
+	width: 85%;
+	background-color: white;
+	color: blue;
+}
+.submit_btn:hover{
+	background-color: blue;
+	color: white;	
+}
+
+@media screen and (min-width:600px ){
+
+
+}

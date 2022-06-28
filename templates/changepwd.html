@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport">
+    <meta content="width:device-width,initial-scale:1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="changepwd.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Change Password</title>
+</head>
+<body>
+    <form action="changepwd" method="POST">
+        {% csrf_token %}
+        <div class="form">
+            <h1 class="heading">Forget Password</h1>
+            <input type="" class="input" name="name_username" placeholder="UserName" required><br>
+            <input type="submit" class="submit_btn" value="submit">
+        </div>
+    </form>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="{% static 'new_css/register.css' %}">
+      <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- font aewsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Register</title>
+</head>
+<body class="container">
+
+  <style>
+  .register_heading{
+    font-size:30px;
+    text-align: center;
+
+}
+    </style>
+  <style>
+  .form_div{
+     width:325px;
+     width:410px;
+     height: 410px;
+     height:335px;
+     border-radius: 20px;
+     border: 1px solid black;
+     left: 35%;
+     right: 40%;
+ }
+label{
+     padding: 5px 2px;
+}
+input[type=text],[type=password]{
+      width:70%;
+      display: block;
+      padding: 7px;
+      margin: 10px;
+      margin-top:0px;
+      margin-left:40px;
+      border-top:0px;
+      border-right: 0px;
+      border-bottom:1px solid #999;
+      border-left:0px;
+}
+select{
+      width:70%;
+      display: block;
+      padding: 7px;
+      margin: 10px;
+      margin-top:0px;
+      margin-left:40px;
+      border-top:0px;
+      border-right: 0px;
+      border-bottom:1px solid #999;
+      border-left:0px;
+}
+</style>
+ <style>
+  .registerbtn{
+     padding:7px 45px;
+     border-radius: 10px;
+     margin-left: 10%;
+     border:none;
+     outline: none;
+     width: 80%;
+     background-color: white;
+     color: green;
+    border: 1.5px solid green;
+}
+.registerbtn:hover{
+    background-color:green;
+    color: white;
+}
+</style>
+  <div>
+      {% if messages %}
+        {% for message in messages %}
+            <h5 style="text-align:center;"><span style="color:red;">{{message}}</span></h5>
+        {% endfor %}
+      {% endif %}
+  </div>
+  <div class="form_div">
+      <form action="/registration" method="post">
+          {% csrf_token %}
+          <p class="register_heading">
+              <b>Register</b>
+          </p>
+          <hr>
+          <div class="row">
+              <div class="col-6">
+                   <!-- <label for="username"><b>Username</b></label> -->
+                   <input type="text"  class="" name="username" placeholder="username" id="username">
+              </div>
+              <div class="col-6">
+                   <!-- <label for="userid"><b>UserId</b></label> -->
+                   <input type="text" class="" name="userid" placeholder="userid" id="userid">
+              </div>
+           </div>
+          <div class="row">
+              <div class="col-6">
+                   <!-- <label for="email"><b>Email</b></label> -->
+                   <input type="text" class="" placeholder="Enter Email" name="email" id="email" required>
+               </div>
+              <div class="col-6">
+                  <select class="option_input" name="role">
+<!--					{% for group in groups %}-->
+<!--					<option class="option" value="Staff" placeholder="role">{{group.name}}</option>-->
+<!--					{% endfor %}-->
+
+                      <option class="option" >student</option>
+                      <option class="option">staff</option>
+				</select>
+               </div>
+           </div>
+          <div class="row">
+              <div class="col-6">
+                  <!-- <label for="psw"><b>Password</b></label> -->
+                  <input type="password" class="" placeholder="Enter Password" name="pwd1" id="psw" required>
+              </div>
+              <div class="col-6">
+                  <!-- <label for="psw-repeat"><b>Repeat Password</b></label> -->
+                  <input type="password" class="" placeholder="Repeat Password" name="pwd2" id="psw-repeat" required>
+               </div>
+          </div>
+           <div class="container signin">
+               <p>Already have an account? <a href="library homepage.html">Sign in</a></p>
+           </div>
+           <input type="submit" onclick="password_matching()" class="registerbtn"></input>
+    </form>
+  </div>
+    <!--passwords matching validation-->
+			<script>
+				function password_matching(){
+				var x=document.getElementById("psw").value;
+				var y=document.getElementById("psw-repeat").value;
+				if(x==y){
+					return true;
+				}
+				else{
+					alert("passwords not matching");
+					return false;
+				}
+				}
+			</script>
+</form>
+<!-- Optional JavaScript; choose one of the two! -->
+<!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+{% endblock %}
+</body>
+</html>

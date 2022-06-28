@@ -1,0 +1,168 @@
+
+<!--new home page-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="{% static 'new_css/library_homepage.css' %}">
+
+    <title>Home Page</title>
+  </head>
+  <body class="container">
+    <header>
+      <div class="logo_div">
+        <img src="{% static 'images/JB_logo.jpg' %}" class="logo">
+      </div>
+      <!-- <hr> -->
+      <div class="navigation">
+        <ul class="nav nav-pill">
+          {% if user.is_authenticated %}
+          <li class="nav-item nav-element">
+            <a href="addbooks" class="nav-link text-secondary">Add Books</a>
+          </li>
+          <li class="nav-item nav-element">
+            <a href="viewbooks" class="nav-link text-secondary">View Books</a>
+          </li>
+          <li class="nav-item nav-element">
+            <a href="logout" class="nav-link text-secondary">Logout</a>
+          </li>
+          <li class="nav-item nav-element">
+            <a href="personal_info" class="nav-link text-secondary">
+              <!--person icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+              </svg>
+              <!--username-->
+<!--		<p>{{username}}</p>-->
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a href="/login" class="nav-link"><span class="text-dark nav-text" >Login</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="/registration" class="nav-link"><span class="text-dark nav-text">Register</span></a>
+          </li>
+          {% endif %}
+        </ul>
+       </div>
+    </header>
+    <div class="error_div">
+      {% if messages %}
+        {% for message in messages %}
+            <h5 style="text-align:center;"><span style="color:red;">{{message}}</span></h5>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    {% block content %}
+        <!-- login form -->
+       <div class="form_div">
+          <form action="/login" class="login_form" method="post">
+            {% csrf_token %}
+              <div class="heading">
+                <span class="form_heading_text" style="text-align: center;"><h3>Login</h3></span>
+              </div>
+            <div class="form-group ">
+              <label for="for_username">Username</label>
+              <input type="" class="form-control input_field"  aria-describedby="emailHelp" placeholder="Username" name="username">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control input_field" id="exampleInputPassword1" placeholder="Password" name="password">
+            </div>
+            <div>
+              <div class="forgetpwd">
+                <p>forgot password</p>
+              </div>
+              <div class="registerdiv">
+                <p>Don't have an account? <a href="login_registerpage.html">Sign Up</a></p>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary submit_btn transition ease-in duration-700 ...">Submit</button>
+          </form>
+        </div>
+
+
+        <!-- register form -->
+        <!-- <div id="register_form">
+          <div class="form_heading">
+             <span class="form_heading_text"><h3>Create Account</h3></span>
+          </div>
+          <form>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group" class="from_subdiv">
+                      <label for="for_username" class="form_label">Username</label>
+                      <input type="" class="form-control input_field"  aria-describedby="emailHelp"  class="from_input">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="for_firstname">firstname</label>
+                      <input type="" class="form-control input_field"  aria-describedby="emailHelp" >
+                    </div>
+                  </div>
+                </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control input_field" id="exampleInputPassword1" >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Confirm Password</label>
+                  <input type="password" class="form-control input_field" id="exampleInputPassword1" >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group" class="from_subdiv">
+                  <label for="for_email" class="form_label">Email</label>
+                  <input type="" class="form-control input_field"  aria-describedby="emailHelp"  class="from_input">
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="for_role">Role</label><br>
+                <select class="select_div">
+                  <div class="option_div">
+                    <option class="">Staff</option>
+                    <option class="">Student</option>
+                  </div>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary submit_btn">Create</button>
+        </form>
+    </div> -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- <script type="text/javascript">
+      function register_translate(){
+        document.getElementById("register_form").style.zIndex="1";
+        document.getElementById("login_form").style.zIndex="0";
+      }
+
+    </script>
+ -->    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  {% endblock %}
+  </body>
+</html>

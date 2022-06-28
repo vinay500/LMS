@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="{% static 'new_css/library_homepage.css' %}">
+
+    <title>Home Page</title>
+  </head>
+  <body class="container">
+    <header>
+      <div class="logo_div">
+        <img src="{% static 'images/JB_logo.jpg ' %}" class="logo">
+      </div>
+      <!-- <hr> -->
+      <div class="navigation">
+        <ul class="nav nav-pill">
+          <!-- <li class="nav-item">
+            <a href="" class="nav-link active"> <span class="text-dark nav-text">Home</span></a>
+          </li> -->
+          <li class="nav-item">
+            <a href="library homepage.html" class="nav-link"><span class="text-dark nav-text" >Login</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="login_registerpage.html" class="nav-link"><span class="text-dark nav-text">Register</span></a>
+          </li>
+        </ul>
+       </div>
+    </header>
+
+    {% block content %}
+        <!-- login form -->
+       <div class="form_div">
+          <form action="login" class="login_form">
+            {% csrf_token %}
+              <div class="heading">
+                <span class="form_heading_text" style="text-align: center;"><h3>Login</h3></span>
+              </div>
+            <div class="form-group ">
+              <label for="for_username">Username</label>
+              <input type="" class="form-control input_field"  aria-describedby="emailHelp" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control input_field" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div>
+              <div class="forgetpwd">
+                <p>forgot password</p>
+              </div>
+              <div class="registerdiv">
+                <p>Don't have an account? <a href="login_registerpage.html">Sign Up</a></p>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary submit_btn transition ease-in duration-700 ...">Submit</button>
+          </form>
+        </div>
+        
+
+        <!-- register form -->
+        <!-- <div id="register_form">
+          <div class="form_heading">
+             <span class="form_heading_text"><h3>Create Account</h3></span>
+          </div>
+          <form>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group" class="from_subdiv">
+                      <label for="for_username" class="form_label">Username</label>
+                      <input type="" class="form-control input_field"  aria-describedby="emailHelp"  class="from_input">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="for_firstname">firstname</label>
+                      <input type="" class="form-control input_field"  aria-describedby="emailHelp" >
+                    </div>
+                  </div>
+                </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control input_field" id="exampleInputPassword1" >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Confirm Password</label>
+                  <input type="password" class="form-control input_field" id="exampleInputPassword1" >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group" class="from_subdiv">
+                  <label for="for_email" class="form_label">Email</label>
+                  <input type="" class="form-control input_field"  aria-describedby="emailHelp"  class="from_input">
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="for_role">Role</label><br>
+                <select class="select_div">
+                  <div class="option_div">
+                    <option class="">Staff</option>
+                    <option class="">Student</option>
+                  </div>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary submit_btn">Create</button>
+        </form>
+    </div> -->
+  
+    
+
+    <!-- Optional JavaScript -->
+    <!-- <script type="text/javascript">
+      function register_translate(){
+        document.getElementById("register_form").style.zIndex="1";
+        document.getElementById("login_form").style.zIndex="0";
+      }
+
+    </script>
+ -->    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  {% endblock %}
+  </body>
+</html>

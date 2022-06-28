@@ -1,0 +1,70 @@
+{% extends 'home.html' %}
+{% load static %}
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--	<title>View Books</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>books details</h1>-->
+<!--<p style="color:green">{{success}}</p>-->
+<!--<p style="color:red">{{error}}</p>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Book</title>
+	<meta name="viewport">
+    <meta content="width:device-width,initial-scale:1.0">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/view_books.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	{% if messages %}
+		{% for message in messages %}
+			<p style="color:red; text-align:center">{{message}}</p>
+		{% endfor %}
+	{% endif %}
+
+	<div class="container">
+		<table class="table table-hover table-bordered table-responsive-xl">
+			<thead>
+				<tr>
+					<th>Username</th>
+<!--					<th>UserId</th>-->
+					<th>Book ID</th>
+					<th>Book Name</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for book in books %}
+				<tr>
+					<td>{{book.username}}</td>
+<!--					<td>{{book.userid}}</td>-->
+					<td>{{book.book_id}}</td>
+					<td>{{book.book_name}}</td>
+					<td><a href="editbook/{{book.id}}"><input type="submit" value="edit" class="edit_btn"></a>
+					    <a href="deletebook/{{book.id}}"><input type="submit" value="delete" class="delete_btn"></a>
+					</td>
+				</tr>
+			{% endfor %}
+
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
+ {%  endblock %}
